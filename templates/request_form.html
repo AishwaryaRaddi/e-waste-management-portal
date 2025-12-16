@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>E-Waste Request</h2>
+<form method="post">
+<select name="product">
+<option>Mobile</option>
+<option>Battery</option>
+<option>Laptop</option>
+
+</select>
+<textarea name="query" placeholder="Your question"></textarea>
+<button>Submit</button>
+</form>
+{% endblock %}

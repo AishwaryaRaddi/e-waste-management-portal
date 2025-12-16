@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Waste Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<nav>
+    <h2>♻️ E-Waste Portal</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/awareness">Awareness</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
