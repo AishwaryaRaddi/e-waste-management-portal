@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+{% for r in data %}
+<form method="post" class="box">
+<p>User: {{r[1]}}</p>
+<p>{{r[2]}} - {{r[3]}}</p>
+<p>{{r[4]}}</p>
+<input type="hidden" name="id" value="{{r[0]}}">
+<select name="status">
+<option>Accepted</option>
+<option>Rejected</option>
+</select>
+<textarea name="response" placeholder="Guidelines / Rules"></textarea>
+<button>Update</button>
+</form>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Requests</h2>
+{% for r in data %}
+<div class="box">
+<p>Product: {{r[2]}}</p>
+<p>Status: {{r[5]}}</p>
+<p>Response: {{r[6]}}</p>
+<p>Nearest Center: {{ centers[r[3]][r[2]] }}</p>
+</div>
+{% endfor %}
+{% endblock %}
